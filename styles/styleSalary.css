@@ -1,0 +1,88 @@
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.salary_app_conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.input_conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.count_btn {
+  height: 66px;
+  border-radius: 5px;
+}
+.form_conteiner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  width: 300px;
+  border: 1px solid;
+  border-radius: 10px;
+  border-color: darkgray;
+  position: relative;
+  box-shadow: 1px 1px 2px 1px grey;
+  padding: 33px 50px 10px 50px;
+}
+.oklad_input {
+  margin: 25px;
+  height: 50px;
+  border-bottom: 1px solid grey;
+  width: 100%;
+  font-size: 30px;
+}
+.na_ruki_input {
+  margin: 10px;
+  height: 23px;
+  border-bottom: 1px solid grey;
+  width: 100px;
+}
+.zp-title {
+  margin-bottom: 10px;
+  position: absolute;
+  top: 20px;
+}
+.discription-naruki {
+  color: grey;
+  position: absolute;
+  left: 33px;
+  top: 110px;
+  display: none;
+}
+.discription-oklad {
+  color: grey;
+  position: absolute;
+  left: 33px;
+  top: 10px;
+  display: none;
+}
+.discription_conteiner {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  width: 100%;
+}
+.pdfo {
+  color: grey;
+  display: none;
+  margin-bottom: 20px;
+}
+.vz {
+  color: grey;
+  display: none;
+  margin-bottom: 20px;
+}
+.visible {
+  display: initial;
+}
