@@ -56,14 +56,14 @@ input[type="number"]::-webkit-outer-spin-button {
 .discription-naruki {
   color: grey;
   position: absolute;
-  left: 33px;
+  left: 0px;
   top: 110px;
   display: none;
 }
 .discription-oklad {
   color: grey;
   position: absolute;
-  left: 33px;
+  left: 0px;
   top: 10px;
   display: none;
 }

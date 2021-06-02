@@ -9,7 +9,15 @@ const vsPercent = 0.015
 const ndflPercent = 0.18
 
 
-function addClass () {
+function numberWithSpaces() {
+    partialAmount.value = partialAmount.value.toString().replace(" ", "");
+    totalAmount.value = totalAmount.value.toString().replace(" ", "");
+    partialAmount.value = partialAmount.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    totalAmount.value = totalAmount.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "); 
+}
+
+
+function descriptionVisbility () {
 
     if (totalAmount.value.length > 0) {
         pdfo.classList.add('visible')
@@ -26,31 +34,35 @@ function addClass () {
 }
 
 function pdfoCount () {
-    pdfo.textContent = "ПДФО 18%:" + (totalAmount.value * ndflPercent).toFixed(2) + ' грн.'
+    pdfo.textContent = "ПДФО 18%: " + (totalAmount.value * ndflPercent).toFixed(2) + ' грн.'
 }
 function militaryTaxCount () {
     militaryTax.textContent = "Військовий збір 1,5%: " + (totalAmount.value * vsPercent).toFixed(2) + ' грн.'
 }
 
 function totalAmountHeandler () {
+    totalAmount.value = totalAmount.value.toString().replace(/\s+/g, '')
     partialAmount.value = (totalAmount.value - totalAmount.value * vsPercent - totalAmount.value * ndflPercent).toFixed(2)
 }
 
 function partialAmountHeandler () {
+    partialAmount.value = partialAmount.value.toString().replace(/\s+/g, '')
     totalAmount.value = (partialAmount.value / 0.805).toFixed(2)
 }
 
 totalAmount.addEventListener("keyup", () => {
     totalAmountHeandler()
-    addClass()
+    descriptionVisbility()
     pdfoCount()
     militaryTaxCount()
+    numberWithSpaces()
 })
 partialAmount.addEventListener("keyup", () => {
     partialAmountHeandler()
-    addClass()
+    descriptionVisbility()
     pdfoCount()
     militaryTaxCount()
+    numberWithSpaces(partialAmount.value)
 })
 
 
