@@ -33,7 +33,7 @@ input[type="number"]::-webkit-outer-spin-button {
   border-color: darkgray;
   position: relative;
   box-shadow: 1px 1px 2px 1px grey;
-  padding: 33px 50px 10px 50px;
+  padding: 5px 50px 21px 50px;
 }
 .oklad_input {
   margin: 25px;
@@ -51,7 +51,8 @@ input[type="number"]::-webkit-outer-spin-button {
 .zp-title {
   margin-bottom: 10px;
   position: absolute;
-  top: 20px;
+  top: -40px;
+  font-size: 20px;
 }
 .discription-naruki {
   color: grey;
@@ -81,7 +82,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .vz {
   color: grey;
   display: none;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 .visible {
   display: initial;

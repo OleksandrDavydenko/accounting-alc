@@ -10,12 +10,11 @@ const ndflPercent = 0.18
 
 
 function numberWithSpaces() {
-    partialAmount.value = partialAmount.value.toString().replace(" ", "");
-    totalAmount.value = totalAmount.value.toString().replace(" ", "");
-    partialAmount.value = partialAmount.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-    totalAmount.value = totalAmount.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "); 
+    const valuePartialWithoutSpases = partialAmount.value.toString().replace(" ", "");
+    const valueTotalWithoutSpases = totalAmount.value.toString().replace(" ", "");
+    partialAmount.value = valuePartialWithoutSpases.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    totalAmount.value = valueTotalWithoutSpases.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "); 
 }
-
 
 function descriptionVisbility () {
 
