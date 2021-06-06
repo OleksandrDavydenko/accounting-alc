@@ -8,6 +8,12 @@ const militaryTax = document.querySelector('.vz')
 const vsPercent = 0.015
 const ndflPercent = 0.18
 
+function replacePoint () {
+    partialAmount.value = partialAmount.value.toString().replace(',', '.'); 
+    totalAmount.value = totalAmount.value.toString().replace(',', '.'); 
+    
+}
+
 
 function numberWithSpaces() {
     const valuePartialWithoutSpases = partialAmount.value.toString().replace(" ", "");
@@ -18,7 +24,7 @@ function numberWithSpaces() {
 
 function descriptionVisbility () {
 
-    if (totalAmount.value.length > 0) {
+    if (totalAmount.value.length >= 0) {
         pdfo.classList.add('visible')
         militaryTax.classList.add('visible')
         descriptionOklad.classList.add('visible')
@@ -50,6 +56,7 @@ function partialAmountHeandler () {
 }
 
 totalAmount.addEventListener("keyup", () => {
+    replacePoint ()
     totalAmountHeandler()
     descriptionVisbility()
     pdfoCount()
@@ -57,6 +64,7 @@ totalAmount.addEventListener("keyup", () => {
     numberWithSpaces()
 })
 partialAmount.addEventListener("keyup", () => {
+    replacePoint ()
     partialAmountHeandler()
     descriptionVisbility()
     pdfoCount()
